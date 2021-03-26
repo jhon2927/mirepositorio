@@ -1,0 +1,351 @@
+:root{
+--background : rgb(17, 18, 19);
+--base: rgb(43, 163, 199);
+
+}
+*{
+   padding: 0;
+   margin: 0;
+   color: inherit;
+   list-style: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+}
+
+
+header{
+    width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+    background-color: var(--base);
+}
+
+.logo{
+    width: 30%;
+    border-radius: 50%;
+    font-size: 1.5em;
+}
+
+
+#div__logo{
+    display: flex;  
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.close {
+    color: white;
+    position: absolute;
+        right: .1em;
+        top: .2em;
+    display: block;
+    
+}
+
+#menu {
+    color: white;
+    background: black;
+    position: fixed;
+        left: -100%;
+        top: 0;
+    height: 100%;
+    width: 100%;
+    max-width: none;
+    transition: all 2s;
+    z-index: 999;
+    opacity: 0;
+}
+
+#menu:target {
+    left: 0;
+    opacity: 1;
+}
+
+.menu__li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  padding: .5em;
+}
+
+.subMenu{
+    position: absolute;
+    display: none;
+}
+ul li:hover ul{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer{
+     width: 100%;
+     background-color: var(--base);
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-between;
+
+}
+h1, h2 {
+    color: white;
+    margin-top: .5em;
+    
+}
+
+.foto1{
+    width: 80%;
+    margin: 5% 10%; 
+}
+
+article{
+    color: white;
+      font-size: auto;
+      text-align: justify; 
+}
+
+.contenedorDeImagenes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.divProductos{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+ }
+
+ .info{
+     display: none;
+ }
+
+.contactos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imagenC{
+    width: 40%;
+}
+
+table, th, td{
+    border: 1px solid white;
+    
+}
+
+.listpro, label{
+    color: white;
+}
+label{
+    width: 20000px;
+}
+
+
+.imagenes{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.imagen{
+    margin-top: .5em;
+    width: 60%;
+}
+ 
+@media only screen and (min-width:750px){
+     
+
+
+    #menu {
+
+        background-color: var(--base);
+         position: sticky; 
+         max-width: 100%;
+         transition: none;
+         opacity: 1;
+    }
+  
+
+ .open{
+    display: none;
+  }
+  .close{
+      display: none;
+  }
+
+  .buscar{
+      display: flex;     
+  }
+  .contenedorDeImagenes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+  .imagenes{
+      
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      
+      
+
+  }
+
+  .imagen{
+      width: 50%;
+      
+      margin: .5em;
+  }
+
+  
+
+      h1, h2 {
+        color: white;
+        margin-top: .5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  .logo:hover{
+      width: 50%;
+  }
+
+  .foto1{
+
+      animation-duration: 6s;
+      animation-name: slid;
+  }
+
+  @keyframes slid {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+      
+  }
+ 
+  .contactos{
+      display: flex;
+      flex-direction:row ;
+      justify-content: space-around;
+      align-items: center;
+        margin-bottom: 17em;
+  }
+
+  
+  .imagenC{
+      
+      animation-duration: 4s;
+      animation-name: entrada;
+      
+  }
+
+  .formulario{
+      animation-duration: 5s;
+      animation-name: entradaf;
+
+  }
+
+  
+  @keyframes entradaf {
+    from{
+        margin-left: 200%;
+         
+     }
+
+    }
+
+  @keyframes entrada {
+   from{
+       margin-left: 300%;
+        
+    }
+
+      
+ 
+}
+
+@media only screen and (min-width:1024px){
+  
+    body{
+       background-image:linear-gradient(to top, grey,black);
+    }
+    header, footer, #menu{
+        background-color: grey;
+    }
+  
+
+    .imagen{
+        width: 100%;
+    }
+
+   
+    .divProductos{
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-around;
+    }
+
+
+    .info{
+        display: none;
+        position: absolute;
+        bottom: -60;
+        padding: .5em;
+        z-index: 1;
+        background-color: black;
+        color: white;
+    }
+
+
+
+    .divProductos:hover .info{
+        display: flex;
+        align-items: flex-end;
+    }
+
+  }
+
+  .main__productos{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+  }
+
+ 
+
+
+
